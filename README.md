@@ -3,21 +3,27 @@
 A two-stage project on the **ANSUR II anthropometric dataset (n=6,068)**: my original exploratory experiments (V1), followed by an **AI-assisted methodological redesign** (V2).
 
 ```mermaid
-flowchart LR
+flowchart TB
   subgraph V1["V1 · Original work"]
-    A1["Prepare ANSUR II<br/>3 targets"] --> A2["Train CTGAN / ctdGAN<br/>historical settings"]
-    A2 --> A3["Fidelity<br/>SDMetrics + Wasserstein/MMD"]
-    A3 --> A4["Utility<br/>XGB · RF · LR · SVM<br/>TRTR / TSTR"]
+    direction TB
+    A1["Prepare ANSUR II<br/>3 targets"]
+    A2["Train CTGAN / ctdGAN<br/>historical settings"]
+    A3["Fidelity<br/>SDMetrics + Wasserstein/MMD"]
+    A4["Utility<br/>XGB · RF · LR · SVM<br/>TRTR / TSTR"]
+    A1 --> A2 --> A3 --> A4
   end
 
   A4 -. "AI-assisted audit" .-> B1
 
   subgraph V2["V2 · Methodological improvements"]
-    B1["Pin data revision<br/>70/30 real split"] --> B2["Train-only<br/>feature selection"]
-    B2 --> B3["Matched generator setup<br/>150 epochs"]
-    B3 --> B4["Scale LR/SVM<br/>+ dummy baseline"]
-    B4 --> B5["5 seeds<br/>quality + utility + 95% CI"]
-    B5 --> B6["GitHub Actions<br/>reproducible benchmark"]
+    direction TB
+    B1["Pin data revision<br/>70/30 real split"]
+    B2["Train-only<br/>feature selection"]
+    B3["Matched generator setup<br/>150 epochs"]
+    B4["Scale LR/SVM<br/>+ dummy baseline"]
+    B5["5 seeds<br/>quality + utility + 95% CI"]
+    B6["GitHub Actions<br/>reproducible benchmark"]
+    B1 --> B2 --> B3 --> B4 --> B5 --> B6
   end
 ```
 

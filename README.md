@@ -6,14 +6,16 @@ A two-stage project on the **ANSUR II anthropometric dataset (n=6,068)**: my ori
 flowchart TB
   subgraph V1["V1 · Original work"]
     direction TB
-    A1["Prepare ANSUR II<br/>3 targets"]
-    A2["Train CTGAN / ctdGAN<br/>historical settings"]
-    A3["Fidelity<br/>SDMetrics + Wasserstein/MMD"]
-    A4["Utility<br/>XGB · RF · LR · SVM<br/>TRTR / TSTR"]
-    A1 --> A2 --> A3 --> A4
+    A1["Prepare ANSUR II<br/>Gender · Age group · DODRace"]
+    A2["Target-specific preprocessing<br/>age binning + feature selection"]
+    A3["Train generators<br/>CTGAN: 3 targets<br/>ctdGAN: Gender + Age"]
+    A4["Fidelity<br/>SDMetrics + Wasserstein/MMD"]
+    A5["Utility<br/>XGB · RF · LR · SVM<br/>TRTR / TSTR"]
+    A6["V1 novelty<br/>Evaluate fidelity and predictive utility together<br/>Test whether similarity preserves useful signal"]
+    A1 --> A2 --> A3 --> A4 --> A5 --> A6
   end
 
-  A4 -. "AI-assisted audit" .-> B1
+  A6 -. "AI-assisted audit" .-> B1
 
   subgraph V2["V2 · Methodological improvements"]
     direction TB
@@ -29,7 +31,7 @@ flowchart TB
 
 ## V1 — original experiments
 
-I tested CTGAN and ctdGAN on Gender, Age_Group and DODRace, then evaluated fidelity and TRTR/TSTR utility.
+I designed the V1 workflow from data preparation through generator training and two-layer evaluation: statistical fidelity and downstream TRTR/TSTR utility. CTGAN was explored across all three targets; ctdGAN was explored for Gender and Age_Group.
 
 | Generator | Target | SDMetrics | TSTR macro-F1 |
 |---|---|---:|---:|
@@ -40,6 +42,8 @@ I tested CTGAN and ctdGAN on Gender, Age_Group and DODRace, then evaluated fidel
 | CTGAN | DODRace | 70.95% | 0.089–0.115 |
 
 These are preserved historical runs, not a controlled model ranking.
+
+**V1 project novelty:** instead of judging synthetic tables only by distributional similarity, I paired fidelity metrics with downstream predictive utility across multiple classifiers and targets. This let the project test a more useful question: **does a synthetic dataset that looks statistically similar also preserve task-relevant signal?** This is a project-level methodological contribution, not a claim of being first in the literature.
 
 ![V1 saved fidelity and TSTR results](results/figures/prototype-overview.png)
 

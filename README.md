@@ -1,4 +1,4 @@
-# Tabular synthetic data with CTGAN & ctdGAN
+# ANSUR II synthetic-data benchmark with CTGAN & ctdGAN
 
 A two-stage project on the **ANSUR II anthropometric dataset (n=6,068)**: my original exploratory experiments (V1), followed by an **AI-assisted methodological redesign** (V2).
 

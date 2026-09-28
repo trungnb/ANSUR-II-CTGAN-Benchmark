@@ -23,7 +23,7 @@ I tested CTGAN and ctdGAN on Gender, Age_Group and DODRace, evaluating distribut
 
 These are preserved historical runs, not a controlled model ranking.
 
-![V1 saved fidelity and TSTR results](results/prototype-overview.png)
+![V1 saved fidelity and TSTR results](results/figures/prototype-overview.png)
 
 ## V2 — AI-assisted methodological development
 

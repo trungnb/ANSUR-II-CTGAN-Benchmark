@@ -1,7 +1,6 @@
-# Only explicitly selected portfolio files are published.
 /.local-originals/
 /.venv/
-/.DS_Store
+.DS_Store
 **/.DS_Store
 **/__pycache__/
 **/.ipynb_checkpoints/
@@ -11,27 +10,8 @@
 *.dcm
 *.xlsx
 *.docx
-/data/*
-!/data/README.md
-/notebooks/*
-!/notebooks/pilot_project_sex.ipynb
-!/notebooks/ctgan_pilot_project_sex.ipynb
-!/notebooks/pilot_project_age.ipynb
-!/notebooks/ctgan_ pilot_project_age.ipynb
-!/notebooks/ctgan_pilot_project_ Race.ipynb
-/results/**
-!/results/README.md
-!/results/figures/
-!/results/figures/*.png
-!/results/figures/*.svg
-!/results/fidelity.csv
-!/results/downstream_metrics.csv
-!/results/experiment_summary.csv
-!/results/saved-output-excerpts/
-!/results/saved-output-excerpts/*.txt
+/data/
 /benchmark_v2/.cache/
-/benchmark_v2/results/**
-!/benchmark_v2/results/README.md
-!/benchmark_v2/results/headline_results.csv
-!/benchmark_v2/results/trtr_baseline.csv
+/benchmark_v2/results/*
+!/benchmark_v2/results/summary.csv
 !/benchmark_v2/results/run_manifest.json

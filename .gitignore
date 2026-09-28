@@ -29,3 +29,5 @@
 !/results/experiment_summary.csv
 !/results/saved-output-excerpts/
 !/results/saved-output-excerpts/*.txt
+/benchmark_v2/.cache/
+/benchmark_v2/results/

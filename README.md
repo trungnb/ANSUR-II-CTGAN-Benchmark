@@ -18,6 +18,14 @@ flowchart LR
 
 ![Saved distribution fidelity and synthetic-data macro-F1 across five experiments](results/figures/prototype-overview.png)
 
+## Benchmark v2
+
+A separate research-grade pipeline is now available in [`benchmark_v2/`](benchmark_v2/README.md).
+It fixes the main design limitations identified in the historical notebooks: train-only feature
+selection, matched generator settings, scaled Logistic Regression/SVM, a dummy baseline, pinned
+input provenance and five pre-specified random seeds. **The v2 benchmark has not yet been fully
+executed, so no new scientific result is claimed here.** Historical outputs below remain unchanged.
+
 ## What the prototype produced
 
 | Generator | Target | SDMetrics quality | TSTR macro-F1 across four models |

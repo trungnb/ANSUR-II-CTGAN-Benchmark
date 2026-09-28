@@ -4,14 +4,26 @@ A two-stage project on the **ANSUR II anthropometric dataset (n=6,068)**: my ori
 
 ```mermaid
 flowchart LR
-  A["V1 · Original experiments"] --> B["Fidelity + TSTR/TRTR"]
-  B --> C["V2 · AI-assisted audit"]
-  C --> D["Leakage-safe, multi-seed benchmark"]
+  subgraph V1["V1 · Original work"]
+    A1["Prepare ANSUR II<br/>3 targets"] --> A2["Train CTGAN / ctdGAN<br/>historical settings"]
+    A2 --> A3["Fidelity<br/>SDMetrics + Wasserstein/MMD"]
+    A3 --> A4["Utility<br/>XGB · RF · LR · SVM<br/>TRTR / TSTR"]
+  end
+
+  A4 -. "AI-assisted audit" .-> B1
+
+  subgraph V2["V2 · Methodological improvements"]
+    B1["Pin data revision<br/>70/30 real split"] --> B2["Train-only<br/>feature selection"]
+    B2 --> B3["Matched generator setup<br/>150 epochs"]
+    B3 --> B4["Scale LR/SVM<br/>+ dummy baseline"]
+    B4 --> B5["5 seeds<br/>quality + utility + 95% CI"]
+    B5 --> B6["GitHub Actions<br/>reproducible benchmark"]
+  end
 ```
 
 ## V1 — original experiments
 
-I tested CTGAN and ctdGAN on Gender, Age_Group and DODRace, evaluating distributional fidelity and downstream utility.
+I tested CTGAN and ctdGAN on Gender, Age_Group and DODRace, then evaluated fidelity and TRTR/TSTR utility.
 
 | Generator | Target | SDMetrics | TSTR macro-F1 |
 |---|---|---:|---:|
@@ -27,7 +39,7 @@ These are preserved historical runs, not a controlled model ranking.
 
 ## V2 — AI-assisted methodological development
 
-V2 extends V1 through AI-assisted methodological audit, reproducibility engineering and multi-seed benchmarking. The redesign moves feature selection inside the training split, matches the main generator training settings, scales LR/SVM, adds a dummy baseline, pins the data revision and repeats five seeds.
+V2 extends V1 through AI-assisted methodological audit, reproducibility engineering and multi-seed benchmarking.
 
 GitHub Actions [run #3](https://github.com/trungnb/Medical-CTGAN-Synthesis/actions/runs/36395443027) completed **15/15 matrix jobs + aggregate successfully**.
 

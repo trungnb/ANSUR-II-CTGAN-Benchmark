@@ -15,3 +15,5 @@
 /benchmark_v2/results/*
 !/benchmark_v2/results/summary.csv
 !/benchmark_v2/results/run_manifest.json
+/notebooks/Untitled*.ipynb
+/results/.keep

@@ -1,0 +1,173 @@
+name: benchmark-v2-full
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "benchmark_v2/**"
+      - ".github/workflows/benchmark-v2-full.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  benchmark:
+    name: ${{ matrix.target }} / seed ${{ matrix.seed }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      max-parallel: 5
+      matrix:
+        target: [Gender, Age_Group, DODRace]
+        seed: [11, 23, 37, 53, 71]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: benchmark_v2/pyproject.toml
+
+      - name: Install benchmark environment
+        working-directory: benchmark_v2
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -e ".[dev]"
+
+      - name: Run unit tests
+        working-directory: benchmark_v2
+        run: pytest -q
+
+      - name: Run target-seed benchmark
+        working-directory: benchmark_v2
+        env:
+          TARGET: ${{ matrix.target }}
+          SEED: ${{ matrix.seed }}
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+          from run_benchmark import run
+
+          cfg = json.loads(Path("config.json").read_text(encoding="utf-8"))
+          cfg["targets"] = [os.environ["TARGET"]]
+          cfg["seeds"] = [int(os.environ["SEED"])]
+          out = Path("results")
+          run(cfg, out)
+
+          suffix = f"{os.environ['TARGET']}_{os.environ['SEED']}"
+          (out / "quality_by_seed.csv").rename(out / f"quality_{suffix}.csv")
+          (out / "utility_by_seed.csv").rename(out / f"utility_{suffix}.csv")
+          PY
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: benchmark-${{ matrix.target }}-${{ matrix.seed }}
+          path: benchmark_v2/results/*.csv
+          if-no-files-found: error
+          retention-days: 7
+
+  aggregate:
+    name: Aggregate benchmark
+    needs: benchmark
+    if: ${{ always() && !cancelled() }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install aggregation dependencies
+        run: python -m pip install pandas scipy
+
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: benchmark-*
+          path: artifacts
+          merge-multiple: true
+
+      - name: Aggregate seed-level outputs
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import math
+          import pandas as pd
+          from scipy.stats import t
+
+          root = Path("artifacts")
+          quality_files = sorted(root.glob("quality_*.csv"))
+          utility_files = sorted(root.glob("utility_*.csv"))
+          if len(quality_files) != 15 or len(utility_files) != 15:
+              raise RuntimeError(
+                  f"Expected 15 quality and 15 utility files; got "
+                  f"{len(quality_files)} and {len(utility_files)}."
+              )
+
+          out = Path("benchmark_results")
+          out.mkdir(exist_ok=True)
+          quality = pd.concat([pd.read_csv(p) for p in quality_files], ignore_index=True)
+          utility = pd.concat([pd.read_csv(p) for p in utility_files], ignore_index=True)
+          quality.to_csv(out / "quality_by_seed.csv", index=False)
+          utility.to_csv(out / "utility_by_seed.csv", index=False)
+
+          def summarise(df, group_cols, metric_cols):
+              rows = []
+              for keys, group in df.groupby(group_cols, dropna=False):
+                  if not isinstance(keys, tuple):
+                      keys = (keys,)
+                  base = dict(zip(group_cols, keys))
+                  for metric in metric_cols:
+                      vals = pd.to_numeric(group[metric], errors="coerce").dropna()
+                      n = len(vals)
+                      mean = vals.mean() if n else math.nan
+                      sd = vals.std(ddof=1) if n > 1 else math.nan
+                      if n > 1:
+                          half = t.ppf(0.975, n - 1) * sd / math.sqrt(n)
+                          lo, hi = mean - half, mean + half
+                      else:
+                          lo = hi = math.nan
+                      rows.append({
+                          **base,
+                          "metric": metric,
+                          "n_seeds": n,
+                          "mean": mean,
+                          "sd": sd,
+                          "ci95_low": lo,
+                          "ci95_high": hi,
+                      })
+              return pd.DataFrame(rows)
+
+          quality_metrics = [
+              "sdmetrics_overall",
+              "column_shapes",
+              "column_pair_trends",
+              "mean_standardised_wasserstein",
+              "exact_duplicate_rate",
+          ]
+          utility_metrics = [
+              "accuracy",
+              "balanced_accuracy",
+              "macro_f1",
+              "macro_auc_ovr",
+          ]
+          summarise(
+              quality, ["target", "generator"], quality_metrics
+          ).to_csv(out / "quality_summary.csv", index=False)
+          summarise(
+              utility, ["target", "generator", "regime", "model"], utility_metrics
+          ).to_csv(out / "utility_summary.csv", index=False)
+          PY
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: benchmark-v2-combined
+          path: benchmark_results/*.csv
+          if-no-files-found: error
+          retention-days: 14

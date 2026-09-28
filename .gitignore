@@ -29,3 +29,9 @@
 !/results/experiment_summary.csv
 !/results/saved-output-excerpts/
 !/results/saved-output-excerpts/*.txt
+/benchmark_v2/.cache/
+/benchmark_v2/results/**
+!/benchmark_v2/results/README.md
+!/benchmark_v2/results/headline_results.csv
+!/benchmark_v2/results/trtr_baseline.csv
+!/benchmark_v2/results/run_manifest.json

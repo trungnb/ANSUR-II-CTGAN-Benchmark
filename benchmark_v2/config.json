@@ -1,0 +1,16 @@
+{
+  "targets": ["Gender", "Age_Group", "DODRace"],
+  "seeds": [11, 23, 37, 53, 71],
+  "test_size": 0.3,
+  "age_feature_fraction": 0.25,
+  "synthetic_rows_per_class": 2000,
+  "cache_dir": ".cache/ansur",
+  "generator_settings": {
+    "epochs": 150,
+    "batch_size": 100,
+    "embedding_dim": 128,
+    "generator_dim": [256, 256],
+    "discriminator_dim": [256, 256],
+    "pac": 10
+  }
+}

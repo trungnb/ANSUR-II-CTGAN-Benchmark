@@ -1,0 +1,15 @@
+{
+  "workflow": "benchmark-v2-full",
+  "run_number": 3,
+  "run_id": 36395443027,
+  "url": "https://github.com/trungnb/Medical-CTGAN-Synthesis/actions/runs/36395443027",
+  "branch": "feat/reproducible-benchmark-v2",
+  "head_sha": "8d6f19313202ba9d35eb41c0f93caf558bab497c",
+  "matrix_jobs": 15,
+  "matrix_success": 15,
+  "aggregate_success": true,
+  "seeds": [11, 23, 37, 53, 71],
+  "targets": ["Gender", "Age_Group", "DODRace"],
+  "generators": ["CTGAN", "ctdGAN"],
+  "note": "Run #3 is the first complete successful multi-seed v2 benchmark after fixing rare-class CTGAN conditional sampling."
+}

@@ -62,7 +62,10 @@ def fit_sample_ctgan(
         attempts = 0
         while remaining > 0 and attempts < 30:
             attempts += 1
-            request_n = max(settings.batch_size, remaining * 2)
+            # Keep a large conditioned batch even when only a few rows remain.
+            # Rare categories can otherwise stall when the request shrinks to a
+            # tiny batch and CTGAN returns a handful of label mismatches.
+            request_n = max(settings.batch_size, n_per_class * 2)
             sample = model.sample(
                 request_n, condition_column=target, condition_value=value
             )

@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
-      max-parallel: 5
+      max-parallel: 15
       matrix:
         target: [Gender, Age_Group, DODRace]
         seed: [11, 23, 37, 53, 71]

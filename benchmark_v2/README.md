@@ -15,7 +15,7 @@ AI-assisted methodological development of the original V1 workflow into a leakag
 
 ## Result
 
-GitHub Actions [run #3](https://github.com/trungnb/Medical-CTGAN-Synthesis/actions/runs/36395443027): **15/15 matrix jobs + aggregate succeeded**.
+GitHub Actions [run #3](https://github.com/trungnb/ANSUR-II-CTGAN-Benchmark/actions/runs/36395443027): **15/15 matrix jobs + aggregate succeeded**.
 
 | Target | CTGAN F1 | ctdGAN F1 | CTGAN quality | ctdGAN quality |
 |---|---:|---:|---:|---:|

@@ -1,0 +1,6 @@
+generator,target,sdmetrics_percent,tstr_macro_f1_min,tstr_macro_f1_max,source_notebook
+ctdGAN,Gender,89.05,0.858,0.9472,pilot_project_sex.ipynb
+CTGAN,Gender,70.99,0.4022,0.5922,ctgan_pilot_project_sex.ipynb
+ctdGAN,Age_Group,93.42,0.1642,0.2239,pilot_project_age.ipynb
+CTGAN,Age_Group,72.19,0.137,0.1726,ctgan_ pilot_project_age.ipynb
+CTGAN,DODRace,70.95,0.0892,0.1145,ctgan_pilot_project_ Race.ipynb

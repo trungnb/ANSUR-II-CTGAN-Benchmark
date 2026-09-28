@@ -1,0 +1,23 @@
+--- ĐANG TIẾN HÀNH CHẤM ĐIỂM VỚI SDMETRICS ---
+Generating report ...
+
+(1/2) Evaluating Column Shapes: |██████████| 94/94 [00:06<00:00, 15.64it/s]|
+Column Shapes Score: 76.55%
+
+(2/2) Evaluating Column Pair Trends: |██████████| 4371/4371 [00:37<00:00, 118.05it/s]|
+Column Pair Trends Score: 65.35%
+
+Overall Score (Average): 70.95%
+
+
+=======================================================
+   BÁO CÁO CHẤT LƯỢNG DỮ LIỆU TỔNG HỢP TỪ SDMETRICS
+=======================================================
+1. Độ tương đồng Hình dáng Đơn biến (Column Shapes): 76.55%
+   (Bao gồm kiểm định KS-Test cho biến số và Chi-Square cho giới tính)
+
+2. Độ tương đồng Tương quan Đa biến (Column Pair Trends): 65.35%
+   (Kiểm tra ma trận tương quan chéo giữ luật giải phẫu Allometry)
+-------------------------------------------------------
+--> OVERALL SDMETRICS TRUST SCORE: 70.95%
+=======================================================

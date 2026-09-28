@@ -1,0 +1,52 @@
+[
+  {
+    "notebook": "notebooks/pilot_project_sex.ipynb",
+    "original_sha256": "d340a8d82a5f2d6a76b8d089671a5129a810b5823dea6538b51df735a40fdc4a",
+    "published_sha256": "3443df5169655cfa5c61fe82ce496f390e63d924c279145797e4fbb1188bf7e7",
+    "retained_output_cells_zero_based": [
+      26,
+      29,
+      30
+    ]
+  },
+  {
+    "notebook": "notebooks/ctgan_pilot_project_sex.ipynb",
+    "original_sha256": "4bb99734e9b37457e30933347cc5942b4a4c9f9bd1e0c901b67dfac7d5ebbec8",
+    "published_sha256": "20bbdffdffb6626b7b55d32f46dd5ca60cf2f13b06354a7ad7d4155e15ce24cb",
+    "retained_output_cells_zero_based": [
+      23,
+      26,
+      27
+    ]
+  },
+  {
+    "notebook": "notebooks/pilot_project_age.ipynb",
+    "original_sha256": "89e94cb3e0641cfa56c5f0ec8f120bbcad593f68de2ed10dddb977ac40769719",
+    "published_sha256": "9a362b491f4e72c144a63da608efefd32393937bbf9a728e676065cfd5ec0fcd",
+    "retained_output_cells_zero_based": [
+      34,
+      37,
+      39
+    ]
+  },
+  {
+    "notebook": "notebooks/ctgan_ pilot_project_age.ipynb",
+    "original_sha256": "ca2abe64a66df686e2c24b2049e9ee3e977eb085b1a7af65d030a1b4f62b5c3a",
+    "published_sha256": "466f5abbd453a5d52307c365e3eb40f69afeebc24281eda873c8b720e35eecc5",
+    "retained_output_cells_zero_based": [
+      28,
+      31,
+      32
+    ]
+  },
+  {
+    "notebook": "notebooks/ctgan_pilot_project_ Race.ipynb",
+    "original_sha256": "45b13b15a164e8728817128c1ce89f699f43af97daa7a9b53963d6a54091c6d3",
+    "published_sha256": "5fb41dbb7c2328c2473d0680408abab8126b2d70e15b820539eb0d8f458a959e",
+    "retained_output_cells_zero_based": [
+      22,
+      25,
+      26
+    ]
+  }
+]

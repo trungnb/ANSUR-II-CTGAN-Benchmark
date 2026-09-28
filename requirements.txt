@@ -1,0 +1,5 @@
+ctgan
+pandas
+numpy
+jupyter
+matplotlib

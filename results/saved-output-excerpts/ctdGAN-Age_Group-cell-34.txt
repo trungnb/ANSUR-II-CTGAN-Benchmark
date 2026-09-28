@@ -1,0 +1,19 @@
+--- THÔNG SỐ ĐẦU VÀO HỆ THỐNG ---
+ -> Kích thước tập dữ liệu THẬT (X_train_np): (1820, 23)
+ -> Kích thước tập dữ liệu GIẢ   (X_synth):    (25000, 23)
+
+=======================================================
+   KẾT QUẢ KIỂM ĐỊNH PHÂN PHỐI DỮ LIỆU TỔNG HỢP HOÀN CHỈNH
+=======================================================
+1. Wasserstein Distance Metric (Đơn biến - Đã chuẩn hóa):
+   - Khoảng cách thô định lượng: 0.1826
+   - Độ tin cậy hình thái cột   : 83.31%
+     (Tránh lỗi tràn số mũ của dữ liệu trắc lượng thô)
+
+2. Maximum Mean Discrepancy Metric (Đa biến toàn cục):
+   - Khoảng cách thô tương quan: 0.0243
+   - Độ tin cậy tương quan giải phẫu (Allometry): 97.60%
+
+-------------------------------------------------------
+--> OVERALL DISTRIBUTION TRUST SCORE: 90.46%
+=======================================================

@@ -1,0 +1,21 @@
+/usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:465: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+
+
+=====================================================================================
+             BẢNG TỔNG HỢP HIỆU NĂNG ĐỘ TIN CẬY (TSTR vs TRTR)
+=====================================================================================
+ Acc_Real F1_Real AUC_Real Acc_Synth F1_Synth AUC_Synth Acc_Efficacy (%) F1_Efficacy (%) AUC_Efficacy (%)
+Model
+XGBoost 0.9922 0.9912 0.9996 0.5633 0.5559 0.6275 56.77% 56.08% 62.77%
+Random Forest 0.9809 0.9782 0.9982 0.6735 0.4093 0.7086 68.66% 41.84% 70.98%
+Logistic Regression 0.9995 0.9995 1.0000 0.6026 0.5922 0.6756 60.29% 59.25% 67.56%
+SVM 0.9729 0.9690 0.9969 0.6728 0.4022 0.8049 69.15% 41.51% 80.75%
+
+=====================================================================================

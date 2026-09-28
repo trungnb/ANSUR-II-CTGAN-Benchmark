@@ -1,0 +1,98 @@
+--- ĐANG TIẾN HÀNH CHẤM ĐIỂM VỚI SDMETRICS ---
+Generating report ...
+
+(1/2) Evaluating Column Shapes: |██████████| 24/24 [00:00<00:00, 135.12it/s]|
+Column Shapes Score: 80.0%
+
+(2/2) Evaluating Column Pair Trends: |█         | 30/276 [00:00<00:05, 42.33it/s]|
+/usr/local/lib/python3.12/dist-packages/sdmetrics/column_pairs/statistical/contingency_similarity.py:103: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  contingency_real_counts = real.groupby(list(columns), dropna=False).size()
+
+(2/2) Evaluating Column Pair Trends: |█▊        | 49/276 [00:01<00:04, 50.87it/s]|
+/usr/local/lib/python3.12/dist-packages/sdmetrics/column_pairs/statistical/contingency_similarity.py:103: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  contingency_real_counts = real.groupby(list(columns), dropna=False).size()
+
+(2/2) Evaluating Column Pair Trends: |██▌       | 70/276 [00:01<00:05, 37.04it/s]|
+/usr/local/lib/python3.12/dist-packages/sdmetrics/column_pairs/statistical/contingency_similarity.py:103: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  contingency_real_counts = real.groupby(list(columns), dropna=False).size()
+
+(2/2) Evaluating Column Pair Trends: |███▎      | 90/276 [00:02<00:05, 31.01it/s]|
+/usr/local/lib/python3.12/dist-packages/sdmetrics/column_pairs/statistical/contingency_similarity.py:103: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  contingency_real_counts = real.groupby(list(columns), dropna=False).size()
+
+(2/2) Evaluating Column Pair Trends: |████      | 111/276 [00:03<00:03, 41.69it/s]|
+/usr/local/lib/python3.12/dist-packages/sdmetrics/column_pairs/statistical/contingency_similarity.py:103: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  contingency_real_counts = real.groupby(list(columns), dropna=False).size()
+
+(2/2) Evaluating Column Pair Trends: |████▊     | 132/276 [00:03<00:02, 53.66it/s]|
+/usr/local/lib/python3.12/dist-packages/sdmetrics/column_pairs/statistical/contingency_similarity.py:103: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  contingency_real_counts = real.groupby(list(columns), dropna=False).size()
+
+(2/2) Evaluating Column Pair Trends: |█████▏    | 144/276 [00:03<00:02, 45.82it/s]|
+/usr/local/lib/python3.12/dist-packages/sdmetrics/column_pairs/statistical/contingency_similarity.py:103: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  contingency_real_counts = real.groupby(list(columns), dropna=False).size()
+
+(2/2) Evaluating Column Pair Trends: |█████▉    | 164/276 [00:04<00:02, 47.21it/s]|
+/usr/local/lib/python3.12/dist-packages/sdmetrics/column_pairs/statistical/contingency_similarity.py:103: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  contingency_real_counts = real.groupby(list(columns), dropna=False).size()
+
+(2/2) Evaluating Column Pair Trends: |██████▎   | 175/276 [00:04<00:02, 42.25it/s]|
+/usr/local/lib/python3.12/dist-packages/sdmetrics/column_pairs/statistical/contingency_similarity.py:103: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  contingency_real_counts = real.groupby(list(columns), dropna=False).size()
+
+(2/2) Evaluating Column Pair Trends: |███████   | 194/276 [00:04<00:01, 51.85it/s]|
+/usr/local/lib/python3.12/dist-packages/sdmetrics/column_pairs/statistical/contingency_similarity.py:103: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  contingency_real_counts = real.groupby(list(columns), dropna=False).size()
+/usr/local/lib/python3.12/dist-packages/sdmetrics/column_pairs/statistical/contingency_similarity.py:103: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  contingency_real_counts = real.groupby(list(columns), dropna=False).size()
+
+(2/2) Evaluating Column Pair Trends: |███████▋  | 213/276 [00:05<00:01, 51.06it/s]|
+/usr/local/lib/python3.12/dist-packages/sdmetrics/column_pairs/statistical/contingency_similarity.py:103: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  contingency_real_counts = real.groupby(list(columns), dropna=False).size()
+
+(2/2) Evaluating Column Pair Trends: |████████  | 224/276 [00:05<00:01, 45.05it/s]|
+/usr/local/lib/python3.12/dist-packages/sdmetrics/column_pairs/statistical/contingency_similarity.py:103: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  contingency_real_counts = real.groupby(list(columns), dropna=False).size()
+
+(2/2) Evaluating Column Pair Trends: |████████▍ | 234/276 [00:05<00:01, 40.06it/s]|
+/usr/local/lib/python3.12/dist-packages/sdmetrics/column_pairs/statistical/contingency_similarity.py:103: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  contingency_real_counts = real.groupby(list(columns), dropna=False).size()
+
+(2/2) Evaluating Column Pair Trends: |█████████ | 251/276 [00:05<00:00, 60.34it/s]|
+/usr/local/lib/python3.12/dist-packages/sdmetrics/column_pairs/statistical/contingency_similarity.py:103: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  contingency_real_counts = real.groupby(list(columns), dropna=False).size()
+/usr/local/lib/python3.12/dist-packages/sdmetrics/column_pairs/statistical/contingency_similarity.py:103: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  contingency_real_counts = real.groupby(list(columns), dropna=False).size()
+/usr/local/lib/python3.12/dist-packages/sdmetrics/column_pairs/statistical/contingency_similarity.py:103: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  contingency_real_counts = real.groupby(list(columns), dropna=False).size()
+/usr/local/lib/python3.12/dist-packages/sdmetrics/column_pairs/statistical/contingency_similarity.py:103: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  contingency_real_counts = real.groupby(list(columns), dropna=False).size()
+
+(2/2) Evaluating Column Pair Trends: |██████████| 276/276 [00:06<00:00, 44.86it/s]|
+Column Pair Trends Score: 64.37%
+
+Overall Score (Average): 72.19%
+
+
+=======================================================
+   BÁO CÁO CHẤT LƯỢNG DỮ LIỆU TỔNG HỢP TỪ SDMETRICS
+=======================================================
+1. Độ tương đồng Hình dáng Đơn biến (Column Shapes): 80.00%
+   (Bao gồm kiểm định KS-Test cho biến số và Chi-Square cho giới tính)
+
+2. Độ tương đồng Tương quan Đa biến (Column Pair Trends): 64.37%
+   (Kiểm tra ma trận tương quan chéo giữ luật giải phẫu Allometry)
+-------------------------------------------------------
+--> OVERALL SDMETRICS TRUST SCORE: 72.19%
+=======================================================
+
+/usr/local/lib/python3.12/dist-packages/sdmetrics/column_pairs/statistical/contingency_similarity.py:103: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  contingency_real_counts = real.groupby(list(columns), dropna=False).size()
+/usr/local/lib/python3.12/dist-packages/sdmetrics/column_pairs/statistical/contingency_similarity.py:103: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  contingency_real_counts = real.groupby(list(columns), dropna=False).size()
+/usr/local/lib/python3.12/dist-packages/sdmetrics/column_pairs/statistical/contingency_similarity.py:103: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  contingency_real_counts = real.groupby(list(columns), dropna=False).size()
+/usr/local/lib/python3.12/dist-packages/sdmetrics/column_pairs/statistical/contingency_similarity.py:103: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  contingency_real_counts = real.groupby(list(columns), dropna=False).size()
+/usr/local/lib/python3.12/dist-packages/sdmetrics/column_pairs/statistical/contingency_similarity.py:103: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  contingency_real_counts = real.groupby(list(columns), dropna=False).size()

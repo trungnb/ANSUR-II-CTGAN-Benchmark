@@ -1,21 +1,21 @@
 generator,target,model,Acc_Real,F1_Real,AUC_Real,Acc_Synth,F1_Synth,AUC_Synth,source_notebook,source_cell_zero_based
-ctdGAN,Gender,XGBoost,0.9922,0.9912,0.9996,0.9317,0.919,0.984,pilot_project_sex.ipynb,30
-ctdGAN,Gender,Random Forest,0.9809,0.9782,0.9982,0.9157,0.8989,0.9785,pilot_project_sex.ipynb,30
-ctdGAN,Gender,Logistic Regression,0.9995,0.9995,1.0,0.887,0.858,0.9845,pilot_project_sex.ipynb,30
-ctdGAN,Gender,SVM,0.9729,0.969,0.9969,0.9543,0.9472,0.9934,pilot_project_sex.ipynb,30
-CTGAN,Gender,XGBoost,0.9922,0.9912,0.9996,0.5633,0.5559,0.6275,ctgan_pilot_project_sex.ipynb,27
-CTGAN,Gender,Random Forest,0.9809,0.9782,0.9982,0.6735,0.4093,0.7086,ctgan_pilot_project_sex.ipynb,27
-CTGAN,Gender,Logistic Regression,0.9995,0.9995,1.0,0.6026,0.5922,0.6756,ctgan_pilot_project_sex.ipynb,27
-CTGAN,Gender,SVM,0.9729,0.969,0.9969,0.6728,0.4022,0.8049,ctgan_pilot_project_sex.ipynb,27
-ctdGAN,Age_Group,XGBoost,0.5311,0.2701,0.6997,0.25,0.2136,0.6163,pilot_project_age.ipynb,39
-ctdGAN,Age_Group,Random Forest,0.5341,0.1851,0.7152,0.1749,0.1642,0.6642,pilot_project_age.ipynb,39
-ctdGAN,Age_Group,Logistic Regression,0.5523,0.2759,0.7225,0.2665,0.2239,0.6018,pilot_project_age.ipynb,39
-ctdGAN,Age_Group,SVM,0.5214,0.1371,0.7337,0.2041,0.1869,0.6465,pilot_project_age.ipynb,39
-CTGAN,Age_Group,XGBoost,0.5311,0.2701,0.6997,0.4136,0.1726,0.463,ctgan_ pilot_project_age.ipynb,32
-CTGAN,Age_Group,Random Forest,0.5341,0.1851,0.7152,0.521,0.137,0.4754,ctgan_ pilot_project_age.ipynb,32
-CTGAN,Age_Group,Logistic Regression,0.5523,0.2759,0.7225,0.5214,0.1371,0.5047,ctgan_ pilot_project_age.ipynb,32
-CTGAN,Age_Group,SVM,0.5214,0.1371,0.7337,0.5214,0.1371,0.4293,ctgan_ pilot_project_age.ipynb,32
-CTGAN,DODRace,XGBoost,0.7903,0.3111,0.7748,0.2262,0.109,0.5187,ctgan_pilot_project_ Race.ipynb,26
-CTGAN,DODRace,Random Forest,0.7371,0.2155,0.7381,0.6111,0.1145,0.5189,ctgan_pilot_project_ Race.ipynb,26
-CTGAN,DODRace,Logistic Regression,0.8131,0.3676,0.8057,0.2559,0.0892,0.4435,ctgan_pilot_project_ Race.ipynb,26
-CTGAN,DODRace,SVM,0.625,0.1099,0.7912,0.625,0.1099,0.501,ctgan_pilot_project_ Race.ipynb,26
+ctdGAN,Gender,XGBoost,0.9922,0.9912,0.9996,0.9317,0.919,0.984,v1_ctdgan_gender.ipynb,30
+ctdGAN,Gender,Random Forest,0.9809,0.9782,0.9982,0.9157,0.8989,0.9785,v1_ctdgan_gender.ipynb,30
+ctdGAN,Gender,Logistic Regression,0.9995,0.9995,1.0,0.887,0.858,0.9845,v1_ctdgan_gender.ipynb,30
+ctdGAN,Gender,SVM,0.9729,0.969,0.9969,0.9543,0.9472,0.9934,v1_ctdgan_gender.ipynb,30
+CTGAN,Gender,XGBoost,0.9922,0.9912,0.9996,0.5633,0.5559,0.6275,ctgan_v1_ctdgan_gender.ipynb,27
+CTGAN,Gender,Random Forest,0.9809,0.9782,0.9982,0.6735,0.4093,0.7086,ctgan_v1_ctdgan_gender.ipynb,27
+CTGAN,Gender,Logistic Regression,0.9995,0.9995,1.0,0.6026,0.5922,0.6756,ctgan_v1_ctdgan_gender.ipynb,27
+CTGAN,Gender,SVM,0.9729,0.969,0.9969,0.6728,0.4022,0.8049,ctgan_v1_ctdgan_gender.ipynb,27
+ctdGAN,Age_Group,XGBoost,0.5311,0.2701,0.6997,0.25,0.2136,0.6163,v1_ctdgan_age_group.ipynb,39
+ctdGAN,Age_Group,Random Forest,0.5341,0.1851,0.7152,0.1749,0.1642,0.6642,v1_ctdgan_age_group.ipynb,39
+ctdGAN,Age_Group,Logistic Regression,0.5523,0.2759,0.7225,0.2665,0.2239,0.6018,v1_ctdgan_age_group.ipynb,39
+ctdGAN,Age_Group,SVM,0.5214,0.1371,0.7337,0.2041,0.1869,0.6465,v1_ctdgan_age_group.ipynb,39
+CTGAN,Age_Group,XGBoost,0.5311,0.2701,0.6997,0.4136,0.1726,0.463,ctgan_ v1_ctdgan_age_group.ipynb,32
+CTGAN,Age_Group,Random Forest,0.5341,0.1851,0.7152,0.521,0.137,0.4754,ctgan_ v1_ctdgan_age_group.ipynb,32
+CTGAN,Age_Group,Logistic Regression,0.5523,0.2759,0.7225,0.5214,0.1371,0.5047,ctgan_ v1_ctdgan_age_group.ipynb,32
+CTGAN,Age_Group,SVM,0.5214,0.1371,0.7337,0.5214,0.1371,0.4293,ctgan_ v1_ctdgan_age_group.ipynb,32
+CTGAN,DODRace,XGBoost,0.7903,0.3111,0.7748,0.2262,0.109,0.5187,v1_ctgan_dodrace.ipynb,26
+CTGAN,DODRace,Random Forest,0.7371,0.2155,0.7381,0.6111,0.1145,0.5189,v1_ctgan_dodrace.ipynb,26
+CTGAN,DODRace,Logistic Regression,0.8131,0.3676,0.8057,0.2559,0.0892,0.4435,v1_ctgan_dodrace.ipynb,26
+CTGAN,DODRace,SVM,0.625,0.1099,0.7912,0.625,0.1099,0.501,v1_ctgan_dodrace.ipynb,26

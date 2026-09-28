@@ -51,7 +51,7 @@ These are preserved historical runs, not a controlled model ranking.
 
 V2 extends V1 through AI-assisted methodological audit, reproducibility engineering and multi-seed benchmarking.
 
-GitHub Actions [run #3](https://github.com/trungnb/Medical-CTGAN-Synthesis/actions/runs/36395443027) completed **15/15 matrix jobs + aggregate successfully**.
+GitHub Actions [run #3](https://github.com/trungnb/ANSUR-II-CTGAN-Benchmark/actions/runs/36395443027) completed **15/15 matrix jobs + aggregate successfully**.
 
 | Target | CTGAN F1 | ctdGAN F1 | CTGAN quality | ctdGAN quality |
 |---|---:|---:|---:|---:|

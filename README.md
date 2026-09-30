@@ -15,7 +15,8 @@ flowchart TB
     A1 --> A2 --> A3 --> A4 --> A5 --> A6
   end
 
-  A6 -. "AI-assisted audit" .-> B1
+  A6 -. "AI-assisted audit" .-> X["V1 AUDIT<br/>Age feature selection before split<br/>Unequal generator budgets · unscaled LR/SVM<br/>Single stochastic run"]
+  X --> B1
 
   subgraph V2["V2 · Methodological improvements"]
     direction TB
@@ -27,6 +28,8 @@ flowchart TB
     B6["GitHub Actions<br/>reproducible benchmark"]
     B1 --> B2 --> B3 --> B4 --> B5 --> B6
   end
+
+  B6 --> Y["REMAINING BOUNDARIES<br/>V1 and V2 are not pooled · five-seed CIs are descriptive<br/>Exact duplicates ≠ privacy · no external-validity claim"]
 ```
 
 ## V1 — original experiments
